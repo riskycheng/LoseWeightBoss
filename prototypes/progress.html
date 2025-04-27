@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计 - LoseWeightBoss</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi ml-1"></i>
+            <i class="fas fa-battery-full ml-1"></i>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold">统计分析</h1>
+        </div>
+
+        <!-- Time Period Selector -->
+        <div class="flex justify-between mb-6 bg-gray-100 rounded-lg p-1">
+            <button class="flex-1 py-2 rounded-lg text-gray-500 font-medium">周</button>
+            <button class="flex-1 py-2 rounded-lg bg-white shadow text-primary font-medium">月</button>
+            <button class="flex-1 py-2 rounded-lg text-gray-500 font-medium">年</button>
+            <button class="flex-1 py-2 rounded-lg text-gray-500 font-medium">全部</button>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="card mb-6">
+            <h2 class="text-lg font-semibold mb-4">本月概览</h2>
+            
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-blue-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">起始体重</p>
+                    <p class="text-2xl font-bold">72.3<span class="text-sm font-normal">kg</span></p>
+                    <p class="text-xs text-gray-500">4月1日</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">当前体重</p>
+                    <p class="text-2xl font-bold">68.5<span class="text-sm font-normal">kg</span></p>
+                    <p class="text-xs text-gray-500">4月27日</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">减重</p>
+                    <p class="text-xl font-bold text-success">-3.8<span class="text-sm font-normal">kg</span></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">平均每日</p>
+                    <p class="text-xl font-bold text-success">-0.14<span class="text-sm font-normal">kg</span></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">记录天数</p>
+                    <p class="text-xl font-bold">27<span class="text-sm font-normal">天</span></p>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <div class="flex justify-between text-sm mb-1">
+                    <span>目标进度</span>
+                    <span>53%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 53%"></div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>起点: 72.3kg</span>
+                    <span>目标: 65.0kg</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weight Trend Chart -->
+        <div class="card mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">体重趋势</h2>
+                <div class="text-sm text-primary">2025年4月</div>
+            </div>
+            
+            <!-- Simplified Chart Representation -->
+            <div class="h-48 bg-gray-50 rounded-lg flex items-end justify-between p-2 mb-2 relative">
+                <!-- Y-axis labels -->
+                <div class="absolute left-2 top-0 h-full flex flex-col justify-between text-xs text-gray-500">
+                    <div>73kg</div>
+                    <div>72kg</div>
+                    <div>71kg</div>
+                    <div>70kg</div>
+                    <div>69kg</div>
+                    <div>68kg</div>
+                </div>
+                
+                <!-- Grid lines -->
+                <div class="absolute left-0 top-0 w-full h-full flex flex-col justify-between">
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <div class="border-t border-gray-200 w-full"></div>
+                </div>
+                
+                <!-- Chart line (simplified) -->
+                <svg class="absolute inset-0 h-full w-full overflow-visible p-2" preserveAspectRatio="none">
+                    <polyline
+                        points="30,10 60,25 90,15 120,35 150,30 180,45 210,40 240,50 270,55 300,60"
+                        fill="none"
+                        stroke="#007aff"
+                        stroke-width="2"
+                    />
+                    <!-- Data points -->
+                    <circle cx="30" cy="10" r="3" fill="#007aff" />
+                    <circle cx="60" cy="25" r="3" fill="#007aff" />
+                    <circle cx="90" cy="15" r="3" fill="#007aff" />
+                    <circle cx="120" cy="35" r="3" fill="#007aff" />
+                    <circle cx="150" cy="30" r="3" fill="#007aff" />
+                    <circle cx="180" cy="45" r="3" fill="#007aff" />
+                    <circle cx="210" cy="40" r="3" fill="#007aff" />
+                    <circle cx="240" cy="50" r="3" fill="#007aff" />
+                    <circle cx="270" cy="55" r="3" fill="#007aff" />
+                    <circle cx="300" cy="60" r="4" fill="#007aff" stroke="#fff" stroke-width="1" />
+                </svg>
+            </div>
+            
+            <!-- X-axis labels -->
+            <div class="flex justify-between text-xs text-gray-500 px-2">
+                <div>1日</div>
+                <div>5日</div>
+                <div>10日</div>
+                <div>15日</div>
+                <div>20日</div>
+                <div>25日</div>
+            </div>
+            
+            <div class="mt-4 grid grid-cols-2 gap-4">
+                <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">最大减重日</p>
+                    <p class="text-lg font-bold text-success">-0.5<span class="text-sm font-normal">kg</span></p>
+                    <p class="text-xs text-gray-500">4月12日</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">最大增重日</p>
+                    <p class="text-lg font-bold text-danger">+0.3<span class="text-sm font-normal">kg</span></p>
+                    <p class="text-xs text-gray-500">4月8日</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Measurements -->
+        <div class="card mb-6">
+            <h2 class="text-lg font-semibold mb-4">身体指标</h2>
+            
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">BMI 指数</p>
+                    <p class="text-2xl font-bold">23.7</p>
+                    <p class="text-xs text-success">正常范围</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-sm text-gray-500">体脂率</p>
+                    <p class="text-2xl font-bold">22.3<span class="text-sm font-normal">%</span></p>
+                    <p class="text-xs text-success">正常范围</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">腰围</p>
+                    <p class="text-xl font-bold">82<span class="text-sm font-normal">cm</span></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">胸围</p>
+                    <p class="text-xl font-bold">98<span class="text-sm font-normal">cm</span></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">臀围</p>
+                    <p class="text-xl font-bold">94<span class="text-sm font-normal">cm</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Progress -->
+        <div class="card mb-6">
+            <h2 class="text-lg font-semibold mb-4">照片进度</h2>
+            
+            <div class="flex space-x-2 overflow-x-auto pb-2 mb-4">
+                <div class="flex-shrink-0 w-20">
+                    <p class="text-xs text-gray-500 mb-1 text-center">4月1日</p>
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="照片" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-20">
+                    <p class="text-xs text-gray-500 mb-1 text-center">4月7日</p>
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="照片" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-20">
+                    <p class="text-xs text-gray-500 mb-1 text-center">4月15日</p>
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="照片" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-20">
+                    <p class="text-xs text-gray-500 mb-1 text-center">4月20日</p>
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583454152956-3a31827c0956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="照片" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-20">
+                    <p class="text-xs text-gray-500 mb-1 text-center">4月27日</p>
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden border-2 border-primary">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="照片" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <button class="secondary-button">查看完整照片对比</button>
+        </div>
+
+        <!-- Insights -->
+        <div class="card mb-6">
+            <h2 class="text-lg font-semibold mb-4">数据洞察</h2>
+            
+            <div class="bg-blue-50 text-blue-700 p-4 rounded-lg mb-4">
+                <div class="flex items-start">
+                    <i class="fas fa-lightbulb text-xl mr-3 mt-1"></i>
+                    <div>
+                        <p class="font-medium mb-1">减重速度适中</p>
+                        <p class="text-sm">您的平均每日减重0.14kg，这是健康的减重速度。保持这个节奏可以更好地维持减重效果。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-green-50 text-green-700 p-4 rounded-lg mb-4">
+                <div class="flex items-start">
+                    <i class="fas fa-check-circle text-xl mr-3 mt-1"></i>
+                    <div>
+                        <p class="font-medium mb-1">记录习惯良好</p>
+                        <p class="text-sm">本月您已记录27天，坚持记录是成功减重的关键。继续保持这个好习惯！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 text-yellow-700 p-4 rounded-lg">
+                <div class="flex items-start">
+                    <i class="fas fa-exclamation-circle text-xl mr-3 mt-1"></i>
+                    <div>
+                        <p class="font-medium mb-1">周末波动较大</p>
+                        <p class="text-sm">数据显示您在周末体重波动较大，建议周末也保持规律的饮食和运动习惯。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Export Data -->
+        <div class="card mb-8">
+            <h2 class="text-lg font-semibold mb-4">数据导出</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <button class="secondary-button flex items-center justify-center">
+                    <i class="fas fa-file-csv mr-2"></i>
+                    导出CSV
+                </button>
+                <button class="secondary-button flex items-center justify-center">
+                    <i class="fas fa-file-pdf mr-2"></i>
+                    导出PDF报告
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <div class="tab-item">
+            <i class="tab-icon fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-plus-circle"></i>
+            <span>记录</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-calendar-alt"></i>
+            <span>历史</span>
+        </div>
+        <div class="tab-item active">
+            <i class="tab-icon fas fa-chart-line"></i>
+            <span>统计</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>

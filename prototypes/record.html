@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记录 - LoseWeightBoss</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi ml-1"></i>
+            <i class="fas fa-battery-full ml-1"></i>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold">今日记录</h1>
+            <p class="text-gray-500">2025年4月27日 星期日</p>
+        </div>
+
+        <!-- Weight Recording Section -->
+        <div class="card">
+            <h2 class="text-lg font-semibold mb-4">记录体重</h2>
+            
+            <div class="flex items-center justify-center mb-6">
+                <div class="text-center">
+                    <span class="text-4xl font-bold">68.5</span>
+                    <span class="text-xl">kg</span>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <input type="range" class="w-full" min="40" max="120" value="68.5" step="0.1">
+                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>40kg</span>
+                    <span>80kg</span>
+                    <span>120kg</span>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4 mb-4">
+                <div class="w-1/2">
+                    <label class="text-sm text-gray-500 mb-1 block">精确调整</label>
+                    <div class="flex">
+                        <button class="w-12 h-12 bg-gray-200 rounded-l-lg flex items-center justify-center text-xl">-</button>
+                        <input type="number" value="68.5" class="h-12 text-center m-0 border-y border-gray-200" step="0.1">
+                        <button class="w-12 h-12 bg-gray-200 rounded-r-lg flex items-center justify-center text-xl">+</button>
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <label class="text-sm text-gray-500 mb-1 block">记录时间</label>
+                    <select class="w-full h-12 rounded-lg border border-gray-200 px-3">
+                        <option>早晨空腹</option>
+                        <option>午餐前</option>
+                        <option>午餐后</option>
+                        <option>晚餐前</option>
+                        <option>晚餐后</option>
+                        <option>睡前</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <label class="text-sm text-gray-500 mb-1 block">备注（可选）</label>
+                <textarea class="w-full h-20 rounded-lg border border-gray-200 p-3" placeholder="添加备注..."></textarea>
+            </div>
+            
+            <div class="flex justify-between text-sm mb-4">
+                <div>
+                    <span class="text-gray-500">上次记录: </span>
+                    <span>68.7kg (昨天)</span>
+                </div>
+                <div>
+                    <span class="text-success font-medium">-0.2kg</span>
+                </div>
+            </div>
+            
+            <button class="primary-button">保存体重记录</button>
+        </div>
+
+        <!-- Photo Recording Section -->
+        <div class="card mt-6">
+            <h2 class="text-lg font-semibold mb-4">记录身体照片</h2>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-sm text-gray-500 mb-2">正面照</p>
+                    <div class="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
+                        <i class="fas fa-camera text-3xl text-gray-400 mb-2"></i>
+                        <span class="text-sm text-gray-500">点击添加照片</span>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 mb-2">侧面照</p>
+                    <div class="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
+                        <i class="fas fa-camera text-3xl text-gray-400 mb-2"></i>
+                        <span class="text-sm text-gray-500">点击添加照片</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <label class="text-sm text-gray-500 mb-1 block">拍摄提示</label>
+                <div class="bg-blue-50 text-blue-700 p-3 rounded-lg text-sm">
+                    <p>• 穿着相同或相似的衣物</p>
+                    <p>• 在相同的位置和光线条件下拍摄</p>
+                    <p>• 保持相同的姿势和角度</p>
+                    <p>• 尽量在同一时间段拍摄（如早晨）</p>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <label class="text-sm text-gray-500 mb-1 block">照片备注（可选）</label>
+                <textarea class="w-full h-20 rounded-lg border border-gray-200 p-3" placeholder="添加备注..."></textarea>
+            </div>
+            
+            <button class="primary-button">保存照片记录</button>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card mt-6">
+            <h2 class="text-lg font-semibold mb-4">快速记录</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <button class="secondary-button flex items-center justify-center">
+                    <i class="fas fa-utensils mr-2"></i>
+                    记录饮食
+                </button>
+                <button class="secondary-button flex items-center justify-center">
+                    <i class="fas fa-running mr-2"></i>
+                    记录运动
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <div class="tab-item">
+            <i class="tab-icon fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item active">
+            <i class="tab-icon fas fa-plus-circle"></i>
+            <span>记录</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-calendar-alt"></i>
+            <span>历史</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-chart-line"></i>
+            <span>统计</span>
+        </div>
+        <div class="tab-item">
+            <i class="tab-icon fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>
