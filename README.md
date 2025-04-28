@@ -1,6 +1,6 @@
 # LoseWeightBoss - 体重管理应用
 
-![LoseWeightBoss Banner](prototypes/docs/Screenshot%202025-04-28%20at%2008.02.53.png)
+![LoseWeightBoss Banner](prototypes/docs/home.png)
 
 LoseWeightBoss 是一款专注于体重管理的 iOS 应用，帮助用户通过记录每日体重和身体照片来追踪减重进度。应用提供直观的数据可视化和进度分析，让用户能够清晰地了解自己的减重历程。
 
@@ -17,27 +17,27 @@ LoseWeightBoss 是一款专注于体重管理的 iOS 应用，帮助用户通过
 ### 首页/仪表盘
 显示用户当前体重、目标进度和照片对比，一目了然地了解减重进度。
 
-![首页/仪表盘](prototypes/docs/Screenshot%202025-04-28%20at%2008.02.53.png)
+![首页/仪表盘](prototypes/docs/home.png)
 
 ### 记录页面
 用户可以在此记录每日体重和身体照片，界面简洁易用。
 
-![记录页面](prototypes/docs/Screenshot%202025-04-28%20at%2008.03.06.png)
+![记录页面](prototypes/docs/record.png)
 
 ### 历史记录
 通过日历和列表形式查看过去的体重和照片记录，轻松追踪历史变化。
 
-![历史记录](prototypes/docs/Screenshot%202025-04-28%20at%2008.03.16.png)
+![历史记录](prototypes/docs/history.png)
 
 ### 统计分析
 提供详细的体重趋势图表和数据分析，帮助用户了解减重效果。
 
-![统计分析](prototypes/docs/Screenshot%202025-04-28%20at%2008.03.34.png)
+![统计分析](prototypes/docs/progress.png)
 
 ### 个人资料
 管理用户信息和应用设置，包括目标体重、个人信息等。
 
-![个人资料](prototypes/docs/Screenshot%202025-04-28%20at%2008.03.43.png)
+![个人资料](prototypes/docs/profile.png)
 
 ## 技术实现
 
