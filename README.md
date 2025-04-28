@@ -1,6 +1,6 @@
 # LoseWeightBoss - 体重管理应用
 
-![LoseWeightBoss Banner](prototypes/docs/Screenshot%202025-04-28%20at%2008.02.53.png)
+![LoseWeightBoss Banner](./prototypes/docs/Screenshot%202025-04-28%20at%2008.02.53.png)
 
 LoseWeightBoss 是一款专注于体重管理的 iOS 应用，帮助用户通过记录每日体重和身体照片来追踪减重进度。应用提供直观的数据可视化和进度分析，让用户能够清晰地了解自己的减重历程。
 
